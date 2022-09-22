@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Detail from './Detail';
 
 function Table(props) {
-    const { characters } = props;
+    const { characters, handleClickDetaild } = props;
     console.log(characters)
     return (
         <div>
@@ -16,6 +18,7 @@ function Table(props) {
                         <th scope="col">specie</th>
                         <th scope="col">gender</th>
                         <th scope="col">Episodios</th>
+                        <th scope="col">detail</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,12 +30,17 @@ function Table(props) {
                         <th>{t.species}</th>
                         <th>{t.gender} </th>
                         <th> <a href={t.episode} >ver</a>  </th>
+                        <th> <Link to={
 
+                            {
+                                pathname: '/detail',
+
+                            }} onClick={() => handleClickDetaild(t.url)}  >ver detail</Link>  </th>
                     </tr>)}
 
                 </tbody>
             </table>
-        </div>
+        </div >
     );
 }
 
