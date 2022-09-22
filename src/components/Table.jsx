@@ -30,12 +30,7 @@ function Table(props) {
                         <th>{t.species}</th>
                         <th>{t.gender} </th>
                         <th> <a href={t.episode} >ver</a>  </th>
-                        <th> <Link to={
-
-                            {
-                                pathname: '/detail',
-
-                            }} onClick={() => handleClickDetaild(t.url)}  >ver detail</Link>  </th>
+                        <th> <Link to={`character/${t.id}`} onClick={() => handleClickDetaild(t.id)}  >ver detail</Link>  </th>
                     </tr>)}
 
                 </tbody>
