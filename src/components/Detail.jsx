@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Avatar, AvatarBadge, WrapItem, AvatarGroup } from '@chakra-ui/react'
 
 
 function Detail(props) {
@@ -21,7 +22,10 @@ function Detail(props) {
     const { name, type, image } = character;
     return (
         <div>
-            <img src={image} />
+            <img />
+            <WrapItem>
+                <Avatar size='2xl' src={image} />
+            </WrapItem>
             <div>{name} </div>
             <div>{id} </div>
             <div>{type} </div>

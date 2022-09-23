@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button, ButtonGroup } from '@chakra-ui/react'
 function Pagination(props) {
     const { info, characters, handleClickPage, page } = props
     const { prev, pages, next } = info;
@@ -11,11 +11,11 @@ function Pagination(props) {
             {characters.length <= 5 ? (<div>{""} </div>) : (
 
                 <div>
-                    <button onClick={() => { handleClickPage(page - 2) }} disabled={prev === null} > {"<"} </button>
-                    <button onClick={() => { handleClickPage(page - 1) }} disabled={prev < 1}  >{page === 0 ? ".." : page - 1}  </button>
-                    <button onClick={() => { handleClickPage(page) }} >{page} </button>
-                    <button onClick={() => { handleClickPage(page + 1) }} disabled={next <= pages - 2}   >{page > pages - 2 ? "..." : page + 1}  </button>
-                    <button onClick={() => { handleClickPage(page + 2) }} disabled={next === null} > {">"}  </button>
+                    <Button m={1} onClick={() => { handleClickPage(page - 2) }} disabled={prev === null} > {"<"} </Button>
+                    <Button m={1} onClick={() => { handleClickPage(page - 1) }} disabled={prev < 1}  >{page === 0 ? ".." : page - 1}  </Button>
+                    <Button m={1} onClick={() => { handleClickPage(page) }} >{page} </Button>
+                    <Button m={1} onClick={() => { handleClickPage(page + 1) }} disabled={next <= pages - 2}   >{page > pages - 2 ? "..." : page + 1}  </Button>
+                    <Button m={1} onClick={() => { handleClickPage(page + 2) }} disabled={next === null} > {">"}  </Button>
                 </div>
 
             )

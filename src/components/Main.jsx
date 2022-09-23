@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Pagination from './Pagination';
 import Search from './Search';
-import Table from './Table';
+import Table from './TableCharacter';
 
 function Main(props) {
     const [characters, setCharacters] = useState([]);

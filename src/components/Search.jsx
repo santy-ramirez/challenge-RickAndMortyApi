@@ -1,10 +1,11 @@
 import React from 'react';
+import { Input } from '@chakra-ui/react'
 
 function Search(props) {
     const { handleChangeSerach } = props
     return (
         <div>
-            <input type='text' onChange={handleChangeSerach} />
+            <Input type='text' placeholder='type something' onChange={handleChangeSerach} />
         </div>
     );
 }
